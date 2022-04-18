@@ -3,6 +3,6 @@ from my_app import app
 
 def test_app():
     with app.app.test_client() as client:
-        response = client.get(f'/hello')
+        response = client.get("/hello")
         assert response.status_code == 200
-        assert response.get_json() == {'hello': 'World'}
+        assert response.get_json() == {"hello": "World"}
